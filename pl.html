@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      height: 2000px; /* Set a height greater than the viewport */
+      margin: 0;
+      padding: 0;
+    }
+
+    .parallax-container {
+      position: relative;
+      height: 100vh; /* Set the height of the parallax container */
+      overflow: hidden;
+    }
+
+    .parallax-image {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%; /* Set the height of the image to fill the container */
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="parallax-container">
+    <img class="parallax-image" src="https://qph.cf2.quoracdn.net/main-qimg-d8f81556a29312541fae192e69330916-lq" alt="Parallax Image">
+  </div>
+
+  <div>
+    <!-- Other content of your webpage -->
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const parallaxImage = document.querySelector('.parallax-image');
+      const scrollPosition = window.pageYOffset;
+
+      // Adjust the position of the image based on the scroll position
+      parallaxImage.style.transform = 'translateY(' + scrollPosition * 0.4 + 'px)';
+    });
+  </script>
+</body>
+</html>

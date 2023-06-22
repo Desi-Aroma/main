@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desi Aroma - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+     body {
+      min-height: 100vh; /* Set minimum height to full viewport height */
+      margin: 0;
+      padding: 0;
+    }
+
+    .parallax-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: calc(100vh - 65px); /* Adjust the height to account for the menu (nav) height */
+      overflow: hidden;
+    }
+
+    .parallax-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .parallax-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    /* Styles for the fading navigation */
+    .fade-out-nav {
+      opacity: 1;
+      transition: opacity 0.5s ease-out;
+    }
+    
+    .fade-out-nav.fade-out {
+      opacity: 0;
+    }
+
+      object-fit: cover; /* Ensure the image fills the container without distortion */ }
+  </style>
+
+</head>
+<body>
+  <header>
+    <nav class="fade-out-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
+  
+
+  <div class="parallax-container">
+    <img class="parallax-image" src="https://qph.cf2.quoracdn.net/main-qimg-d8f81556a29312541fae192e69330916-lq" alt="Parallax Image">
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const parallaxImage = document.querySelector('.parallax-image');
+      const scrollPosition = window.pageYOffset;
+
+      // Adjust the position of the image based on the scroll position
+      parallaxImage.style.transform = 'translateY(' + scrollPosition * 0.4 + 'px)';
+    });
+  </script>
+  </section>
+  
+  <section class="features">
+    <div class="feature">
+      <img src="images/fresh-ingredients.jpg" alt="Fresh Ingredients">
+      <h2>Fresh Ingredients</h2>
+      <p>We source the finest and freshest ingredients to ensure the authentic flavors of Indo-Pakistani cuisine.</p>
+    </div>
+    <div class="feature">
+      <img src="images/traditional-recipes.jpg" alt="Traditional Recipes">
+      <h2>Traditional Recipes</h2>
+      <p>Our food is prepared using time-tested, traditional recipes handed down through generations for an authentic taste.</p>
+    </div>
+    <div class="feature">
+      <img src="images/homemade.jpg" alt="Homemade">
+      <h2>Homemade with Love</h2>
+      <p>Every dish is lovingly prepared in our kitchen, just like it would be at home, to give you a truly comforting experience.</p>
+    </div>
+  </section>
+  
+  <section class="contact-info">
+    <h2>Place your order now!</h2>
+    <p>Call us at <a href="tel:07598339906">075983 39906</a> to enjoy our delicious Indo-Pakistani dishes.</p>
+  </section>
+  
+  <footer>
+    <p>&copy; 2023 Desi Aroma. All rights reserved. | Phone: 075983 39906</p>
+  </footer>
+</body>
+</html>
